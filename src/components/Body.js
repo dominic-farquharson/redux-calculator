@@ -6,7 +6,9 @@ import Screen from './Screen';
 const Body = props => {
   return (
     <div>
-      <Screen />
+      <Screen 
+        total={props.total}
+      />
       <Input />
     </div>
   )

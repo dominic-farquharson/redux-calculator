@@ -10,6 +10,7 @@ const Screen = props => {
   }
   return (
     <div style={style}>
+      {props.total}
     </div>
   )
 }
