@@ -20,7 +20,7 @@ export function subtractNumber(value) {
   // returning action
   return {
     type: 'SUBTRACT_NUMBER',
-    value
+    value: parseInt(value)
   }
 }
 

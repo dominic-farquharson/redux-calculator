@@ -11,7 +11,7 @@ const Body = props => {
       />
       <Input
         addNumber={props.actions.addNumber}
-        subractNumber={props.actions.subractNumber}
+        subtractNumber={props.actions.subtractNumber}
        />
     </div>
   )

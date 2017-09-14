@@ -3,16 +3,40 @@ import React, { Component } from 'react';
 class Input extends Component {
   render() {
     return (
-      <form onSubmit={  
-        e => {
-          e.preventDefault();
-          console.log('number', this.refs.number.value)
-        }
-      }>
-        <input type="number" ref="number" />
-        <button onClick={() => this.props.addNumber(this.refs.number.value)}> + </button>
-        <button> - </button>
-      </form>
+      <div>
+        <form onSubmit={  
+          e => {
+            e.preventDefault();
+          }
+        }>
+          <input type="number" ref="number" />
+        </form>
+
+        <button 
+            onClick={
+              () => {
+                const num = this.refs.number.value;
+                if(parseInt(num)) {
+                  this.props.addNumber(this.refs.number.value)
+                }
+              }
+            }
+        > 
+            + 
+        </button>
+        <button
+          onClick={
+            () => {
+              const num = this.refs.number.value;
+              if(parseInt(num)) {
+                this.props.subtractNumber(this.refs.number.value)
+              }
+            }
+          }
+        > 
+          - 
+        </button>
+        </div>
     )
   }
 }
