@@ -6,10 +6,11 @@
 
 // add a number
 export function addNumber(value) {
+  console.log('adding', value)
   // returning object
   return {
     type: 'ADD_NUMBER',
-    value: data
+    value: parseInt(value)
   }
 }
 
@@ -19,7 +20,7 @@ export function subtractNumber(value) {
   // returning action
   return {
     type: 'SUBTRACT_NUMBER',
-    value: value
+    value
   }
 }
 

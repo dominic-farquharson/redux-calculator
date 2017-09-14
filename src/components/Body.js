@@ -9,7 +9,10 @@ const Body = props => {
       <Screen 
         total={props.total}
       />
-      <Input />
+      <Input
+        addNumber={props.actions.addNumber}
+        subractNumber={props.actions.subractNumber}
+       />
     </div>
   )
 }
