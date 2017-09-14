@@ -12,6 +12,7 @@ const Body = props => {
       <Input
         addNumber={props.actions.addNumber}
         subtractNumber={props.actions.subtractNumber}
+        clear={props.actions.clear}
        />
     </div>
   )

@@ -20,10 +20,15 @@ const calculatorReducer = (state = initialState, action) => {
         total: state.total + action.value
       }  
     case 'SUBTRACT_NUMBER':
-    return {
-      ...state,
-      total: state.total - action.value
-    }  
+      return {
+        ...state,
+        total: state.total - action.value
+      } 
+    case 'CLEAR':
+      return {
+        ...state,
+        total: 0
+      }   
     default:
       return state;
   }

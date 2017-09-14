@@ -36,6 +36,15 @@ class Input extends Component {
         > 
           - 
         </button>
+        <button
+          onClick={
+            () => {
+              this.props.clear();
+            }
+          }
+        >
+          Clear
+        </button>
         </div>
     )
   }

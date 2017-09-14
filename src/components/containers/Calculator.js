@@ -6,7 +6,6 @@ import * as actionCreators from '../../actions/index';
 
 
 function mapStateToProps(state) {
-  console.log('state now', state)
   return {
     total: state.calculator.total
   }
