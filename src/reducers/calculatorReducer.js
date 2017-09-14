@@ -12,11 +12,18 @@ const initialState = {
 
 
 const calculatorReducer = (state = initialState, action) => {
+  console.log('state before reducer', state)
   switch(action.type) {
     case 'ADD_NUMBER':
-      return action.value + state.total    
+      return {
+        ...state,
+        total: state.total + action.value
+      }  
     case 'SUBTRACT_NUMBER':
-      return state.total - action.value
+    return {
+      ...state,
+      total: state.total - action.value
+    }  
     default:
       return state;
   }
